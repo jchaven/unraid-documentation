@@ -10,7 +10,7 @@
 
 <h1 class="display-4">Syncthing</h1>
 <p class="mt-3">The Docker container Syncthing is the service that keeps configured shares on both servers in-sync. This is how content downloaded in High Point appears in Kodi on the TV in Charlotte. Although this is not meant as a backup, this does serve as our off-site copy of the content.</p>
-<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Docker_Syncthing.png" class="img-fluid mx-auto d-block" alt="Syncthing Container properties">
+<img src="content/configuration/HAVEN-NAS3_Docker_Syncthing.png" class="img-fluid mx-auto d-block" alt="Syncthing Container properties">
 
 <h4 class="mt-4">Container Properties</h4>
 <p class="mt-2">The container selected on the Apps tab in Unraid is the package maintained by "Linuxserver.io".</p>
@@ -19,20 +19,20 @@
 
 <h4 class="mt-4">Syncthing Properties</h4>
 <p class="mt-3">Syncthing is managed using a web interface at the address of the Unraid and the port used in the container properties defined above. The image below shows the interface from the <b>HAVEN-NAS3</b> server. On this server are defined two remote devices and several folders which are synced with those devices.</p>
-<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Dashboard.png" class="img-fluid mx-auto d-block" alt="Syncthing Dashboard">
+<img src="content/configuration/HAVEN-NAS3_Syncthing_Dashboard.png" class="img-fluid mx-auto d-block" alt="Syncthing Dashboard">
 
 <p class="mt-4">Defining folders to sync is done by filling in information on several tabs in a modal window that appears when clicking the button "+Add Folder" at the bottom of the list of folders.</p>
 <p class="mt-2">The naming convention used on the <b>General</b> tab is meant to identify the remote device and the directory being synced. In the image below, the name indicates that the folder will sync with the directory <b>Home</b> on the <b>NAS4</b> server. At present all folder definitions only synchronize a single directory with a single remote device. If a folder is synchronized between multiple devices the name should be something like <b>NAS4 / 5540 - Home</b></p>
-<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder1.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+<img src="content/configuration/HAVEN-NAS3_Syncthing_Folder1.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
 
 <p class="mt-4">The <b>Sharing</b> tab is where the devices with which to share are selected. The following image shows the folder is being synced with only the remote device <b>HAVEN-NAS4</b> without an encryption key since the remote device is trusted.</p>
-<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder2.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+<img src="content/configuration/HAVEN-NAS3_Syncthing_Folder2.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
 
 <p class="mt-4">By default Syncthing will <b>Watch for Changes</b> which will synchronize a folder if a change has been detected. For most folders this works fine. However, on directories with large files (2-3 GB) Syncthing appears to function better with this option unchecked.</p>
-<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder3.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+<img src="content/configuration/HAVEN-NAS3_Syncthing_Folder3.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
 
 <p class="mt-4">The following image shows the folder definition for the directory <b>Everyone</b> under the <b>Media</b> share of the remote device <b>NAS4</b>. Here the <b>Watch for Changes</b> option is disabled and the <b>Full Rescan Interval(s)</b> now controls when the folder is scanned for changes.</p>
-<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder4.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+<img src="content/configuration/HAVEN-NAS3_Syncthing_Folder4.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
 
 
 <h4 class="mt-5">Not a Backup</h4>

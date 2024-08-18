@@ -13,7 +13,7 @@
 
 <h4 class="mt-4">Array</h4>
 <p class="mt-2">The storage array is a collection of hard drives (disks) that when combined create a large single storage area for files. The data in array is protected by the use of at least one parity drive. If there are three hard drives in the array; one must be used for parity, the remaining drives can be used for data.</p> 
-<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Array.png" class="img-fluid mx-auto d-block mt-0" alt="Unraid management interface displaying the array">
+<img src="content/configuration/HAVEN-NAS3_Array.png" class="img-fluid mx-auto d-block mt-0" alt="Unraid management interface displaying the array">
 <p class="mt-3">Should the parity drive fail the server will operate normally with data supplied to the clients coming from the data drives as usual. Once replaced, the parity drive will be rebuilt by Unraid automatically. Should a data drive fail then again nothing noticeable on the client will occur. The data from the failed data drive will be replicated and served from the parity drive. Once replaced, the data drive will be rebuilt automatically by Unraid using the information stored on the parity drive.</p>
 
 <p class="mt-2 error" role="alert">If a drive fails replace it as soon as possible. If the parity drive fails AND a data drive fails the information on the failed data drive will be lost.</p>
