@@ -1,0 +1,43 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/main.html')">Configuration</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/docker.html')">Docker</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Syncthing</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">Syncthing</h1>
+<p class="mt-3">The Docker container Syncthing is the service that keeps configured shares on both servers in-sync. This is how content downloaded in High Point appears in Kodi on the TV in Charlotte. Although this is not meant as a backup, this does serve as our off-site copy of the content.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Docker_Syncthing.png" class="img-fluid mx-auto d-block" alt="Syncthing Container properties">
+
+<h4 class="mt-4">Container Properties</h4>
+<p class="mt-2">The container selected on the Apps tab in Unraid is the package maintained by "Linuxserver.io".</p>
+<p class="mt-2"></p>
+
+
+<h4 class="mt-4">Syncthing Properties</h4>
+<p class="mt-3">Syncthing is managed using a web interface at the address of the Unraid and the port used in the container properties defined above. The image below shows the interface from the <b>HAVEN-NAS3</b> server. On this server are defined two remote devices and several folders which are synced with those devices.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Dashboard.png" class="img-fluid mx-auto d-block" alt="Syncthing Dashboard">
+
+<p class="mt-4">Defining folders to sync is done by filling in information on several tabs in a modal window that appears when clicking the button "+Add Folder" at the bottom of the list of folders.</p>
+<p class="mt-2">The naming convention used on the <b>General</b> tab is meant to identify the remote device and the directory being synced. In the image below, the name indicates that the folder will sync with the directory <b>Home</b> on the <b>NAS4</b> server. At present all folder definitions only synchronize a single directory with a single remote device. If a folder is synchronized between multiple devices the name should be something like <b>NAS4 / 5540 - Home</b></p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder1.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+
+<p class="mt-4">The <b>Sharing</b> tab is where the devices with which to share are selected. The following image shows the folder is being synced with only the remote device <b>HAVEN-NAS4</b> without an encryption key since the remote device is trusted.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder2.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+
+<p class="mt-4">By default Syncthing will <b>Watch for Changes</b> which will synchronize a folder if a change has been detected. For most folders this works fine. However, on directories with large files (2-3 GB) Syncthing appears to function better with this option unchecked.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder3.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+
+<p class="mt-4">The following image shows the folder definition for the directory <b>Everyone</b> under the <b>Media</b> share of the remote device <b>NAS4</b>. Here the <b>Watch for Changes</b> option is disabled and the <b>Full Rescan Interval(s)</b> now controls when the folder is scanned for changes.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Syncthing_Folder4.png" class="img-fluid mx-auto d-block" alt="Syncthing Folder configuration">
+
+
+<h4 class="mt-5">Not a Backup</h4>
+<p class="mt-3">The primary goal of Syncthing is to copy content from the server in High Point to the server in Charlotte. This satisfies the need to get the files located offsite in-case something were to happen at either site. However, any accidental deletions will be replicated to the other server. An actual backup protects against this type of data loss.</p>
+
+
+
+<p class="footnote mt-5">unraid/content/configuration/syncthing.html</p>

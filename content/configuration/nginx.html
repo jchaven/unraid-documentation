@@ -1,0 +1,35 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/main.html')">Configuration</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/docker.html')">Docker</a></li>
+    <li class="breadcrumb-item active" aria-current="page">NGINX Web Server</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">NGINX Web Server</h1>
+<p class="mt-3">Nginx, pronounced like "engine-ex", is an open-source web server that serves this website to clients locally and on the internet. The maintainers of this container (Linux Server IO) have included the latest version of <a href="/php.php">PHP</a> as well.</p>
+
+<h4 class="mt-4">Container Properties</h4>
+<p class="mt-2">The container selected on the Apps tab in Unraid is the package maintained by the repository: lscr.io/linuxserver/nginx.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_NGINX.png" class="img-fluid mx-auto d-block" alt="NGINX Container properties">
+
+<h4 class="mt-4">File Location</h4>
+<p class="mt-2">The HTML/PHP files served by the web server are stored in the "appdata" share and accessible as a "user" share. The following image is the location of the root directory as seen in a Linux terminal.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_NGINX_Terminal.png" class="img-fluid d-block" alt="NGINX disk location">
+
+<p class="mt-3">The same location as viewed in file manager on a Linux client.</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_NGINX_Files.png" class="img-fluid d-block" alt="NGINX viewed in File Manager">
+
+<p class="mt-3">To access the web server using a browser requires specifying the port as well: http://192.168.168.53:7980</p>
+
+<!--  DUNCARIN.COM 
+<h4 class="mt-4">Domain properties</h4>
+<p class="mt-2"></p> 
+//-->
+
+
+<p class="footnote mt-5">unraid/content/configuration/nginx.html</p>
+
+

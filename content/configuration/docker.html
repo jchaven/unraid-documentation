@@ -1,0 +1,83 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/main.html')">Configuration</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Docker</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">Docker Containers</h1>
+<p class="mt-3">A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.</p>
+<p class="mt-2">Using Docker containers the Unraid server is able host web-based applications for various purposes. In the case of the Unraid server in High Point those applications are mainly ones that manage the content for the Kodi media shares.</p> 
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Docker.png" class="img-fluid mx-auto d-block" alt="Unraid management interface Docker">
+
+
+<h4 class="mt-4">Installed Containers</h4>
+<p class="mt-2">The following table lists all the containers in use and on which server they are installed.</p>
+<div class="mx-5 px-5 table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">&nbsp;</th>
+      <th class="text-center" scope="col">HAVEN-NAS3</th>
+      <th class="text-center" scope="col">HAVEN-NAS4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloudflare</td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NGINX</td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SABnzbd</td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sonarr</td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Speedtest Tracker</td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+    </tr>
+    <tr>
+      <td>Syncthing</td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+      <td class="text-center"><i class="bi-check-circle-fill" style="font-size: 1rem; color: green;"></i></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+
+<h4 class="mt-4"><a href="#" onclick="loadPage('content/configuration/cloudflare.html')">Cloudflare</a></h4>
+<p class="mt-2">The Cloudflare container is the end-point for a Zero Trust (Argo) tunnel provided by Cloudflare. This allows access from the Internet to this website running in the NGINX container by routing traffic through the tunnel. This means open ports and port-forwarding in the router is not needed.</p> 
+
+
+<h4 class="mt-4"><a href="#" onclick="loadPage('content/configuration/nginx.html')">NGINX Web Server</a></h4>
+<p class="mt-2">This container runs the NGINX web server which hosts this website.</p> 
+
+
+<h4 class="mt-4"><a href="#" onclick="loadPage('content/configuration/sabnzbd.html')">SABnzbd</a> and <a href="#" onclick="loadPage('content/configuration/sonarr.html')">Sonarr</a></h4>
+<p class="mt-2">These containers are used to manage the content for Kodi</p> 
+
+
+<h4 class="mt-4"><a href="#" onclick="loadPage('content/configuration/syncthing.html')">Syncthing</a></h4>
+<p class="mt-2">Files on the two servers are kept in sync by running Syncthing in this container.</p> 
+
+
+<p class="footnote mt-5">unraid/content/configuration/docker.html</p>
+
+<!-- 07/07/2024  3:31:04 PM -->
+

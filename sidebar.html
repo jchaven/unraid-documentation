@@ -1,0 +1,56 @@
+<ul class="list-unstyled mb-5 sidebar-ul">
+  <li><a href="#" onclick="loadPage('content/home/home.html')" id="linkcontent/home/home">Home</a></li>
+
+  <!-- configuration -->
+  <li><a href="#subMenu1" data-bs-toggle="collapse" aria-expanded="false" aria-controls="subMenu1" class="dropdown-toggle" onclick="loadPage('content/configuration/main.html')" id="linkcontent/configuration/main">Configuration</a></li>
+  <li>
+    <ul class="collapse list-unstyled" id="subMenu1">
+      <li><a href="#" onclick="loadPage('content/configuration/storage.html')" id="linkcontent/configuration/storage">Storage</a></li>
+      <li><a href="#" onclick="loadPage('content/configuration/users_and_shares.html')" id="linkcontent/configuration/users_and_shares">Users and Shares</a></li>
+      <li><a href="#" onclick="loadPage('content/configuration/backup.html')" id="linkcontent/configuration/backup">Backup</a></li>
+
+      <!-- Plug-ins -->
+      <li><a href="#subMenu1-0" data-bs-toggle="collapse" aria-expanded="false" aria-controls="subMenu1-0" class="dropdown-toggle" onclick="loadPage('content/configuration/plugins.html')" id="linkcontent/configuration/plugins">Plugins</a></li>
+      <li><ul class="collapse list-unstyled" id="subMenu1-0">
+        <li><a href="#" onclick="loadPage('content/configuration/tailscale.html')" id="linkcontent/configuration/tailscale">Tailscale</a></li>
+        <li><a href="#" onclick="loadPage('content/configuration/unraid_connect.html')" id="linkcontent/configuration/unraid_connect">Unraid Connect</a></li>
+      </ul></li>
+
+      <!-- Docker containers -->
+      <li><a href="#subMenu1-1" data-bs-toggle="collapse" aria-expanded="false" aria-controls="subMenu1-1" class="dropdown-toggle" onclick="loadPage('content/configuration/docker.html')" id="linkcontent/configuration/docker">Docker Containers</a></li>
+      <li><ul class="collapse list-unstyled" id="subMenu1-1">
+        <li><a href="#" onclick="loadPage('content/configuration/cloudflare.html')" id="linkcontent/configuration/cloudflare">Cloudflare</a></li>
+        <li><a href="#" onclick="loadPage('content/configuration/nginx.html')" id="linkcontent/configuration/nginx">NGINX Web Server</a></li>
+        <li><a href="#" onclick="loadPage('content/configuration/sabnzbd.html')" id="linkcontent/configuration/sabnzbd">SABnzbd</a></li>
+        <li><a href="#" onclick="loadPage('content/configuration/sonarr.html')" id="linkcontent/configuration/sonarr">Sonarr</a></li>
+        <li><a href="#" onclick="loadPage('content/configuration/syncthing.html')" id="linkcontent/configuration/syncthing">Syncthing</a></li>
+      </ul></li>
+    
+      <!-- Virtual machines -->
+      <li><a href="#" onclick="loadPage('content/configuration/vms.html')" id="linkcontent/configuration/vms">Virtual Machines</a></li>
+
+    </ul>
+  </li>
+
+  <!-- maintenance -->
+  <li><a href="#subMenu2" data-bs-toggle="collapse" aria-expanded="false" aria-controls="subMenu2" class="dropdown-toggle" onclick="loadPage('content/maintenance/main.html')" id="linkcontent/maintenance/main">Maintenance</a></li>
+  <li><ul class="collapse list-unstyled" id="subMenu2">
+    <li><a href="#" onclick="loadPage('content/maintenance/plugins.html')" id="linkcontent/maintenance/plugins">Update Plugins</a></li>
+    <li><a href="#" onclick="loadPage('content/maintenance/docker.html')" id="linkcontent/maintenance/docker">Update Containers</a></li>
+    <li><a href="#" onclick="loadPage('content/maintenance/drive_replacement.html')" id="linkcontent/maintenance/drive_replacement">Drive Replacement</a></li>
+  </ul></li>
+
+  <!-- troubleshooting -->
+  <li><a href="#subMenu3" data-bs-toggle="collapse" aria-expanded="false" aria-controls="subMenu3" class="dropdown-toggle" onclick="loadPage('content/troubleshooting/main.html')" id="linkcontent/troubleshooting/main">Troubleshooting</a></li>
+  <li><ul class="collapse list-unstyled" id="subMenu3">
+    <li><a href="#" onclick="loadPage('content/troubleshooting/flash_drive_failure.html')" id="linkcontent/troubleshooting/flash_drive_failure">Flash Drive Failure</a></li>
+    <li><a href="#" onclick="loadPage('content/troubleshooting/power_loss.html')" id="linkcontent/troubleshooting/power_loss">Power Loss</a></li>
+  </ul></li>
+
+
+  <li><a href="#" onclick="loadPage('back-index.html')" id="linkcontent/back-index">Index</a></li>
+
+<!--  <li><a href="#" onclick="loadPage('content/contact.html')" id="linkcontent/contact">Contact Us</a></li>  -->
+</ul>
+
+

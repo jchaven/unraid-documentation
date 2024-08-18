@@ -1,0 +1,136 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/main.html')">Configuration</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Storage</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">Storage</h1>
+<p class="mt-3">The primary role of the server is storage. Creating a location central to all computers on the network (clients) to which those computers can save important files and documents. Files being centralized and off the client computer reduces the potential loss due to disk failure or mistake.</p>
+
+
+<h4 class="mt-4">Array</h4>
+<p class="mt-2">The storage array is a collection of hard drives (disks) that when combined create a large single storage area for files. The data in array is protected by the use of at least one parity drive. If there are three hard drives in the array; one must be used for parity, the remaining drives can be used for data.</p> 
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Array.png" class="img-fluid mx-auto d-block mt-0" alt="Unraid management interface displaying the array">
+<p class="mt-3">Should the parity drive fail the server will operate normally with data supplied to the clients coming from the data drives as usual. Once replaced, the parity drive will be rebuilt by Unraid automatically. Should a data drive fail then again nothing noticeable on the client will occur. The data from the failed data drive will be replicated and served from the parity drive. Once replaced, the data drive will be rebuilt automatically by Unraid using the information stored on the parity drive.</p>
+
+<p class="mt-2 error" role="alert">If a drive fails replace it as soon as possible. If the parity drive fails AND a data drive fails the information on the failed data drive will be lost.</p>
+
+<p class="mt-2">Unlike typical RAID servers Unraid does not require that all drives in the array be the same size. This is the power of Unraid, disks can be different sizes allowing you to use older, smaller drives until they die. The only rule with Unraid is the storage size of the parity drive must be at least as large as the largest data drive. For example, if the server has three data drives consisting of a 2TB disk, a 3TB disk, and a 4TB disk; then the parity drive must be at least 4TB in size.</p>
+
+<p class="mt-3">The following tables list the disks in the array for each server.</p>
+<h6 class="mt-2">HAVEN-NAS3</h6>
+<div class="table-responsive justify-content-center px-5">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Device</th>
+      <th scope="col">Disk Identification</th>
+      <th scope="col">Size</th>
+      <th scope="col">Partition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Parity</td>
+      <td>ST14000NM000J-2TX103_ZR904TY7</td>
+      <td>14 TB</td>
+      <td>(sdb)</td>
+    </tr>
+
+    <tr>
+      <td>Disk 1</td>
+      <td>ST12000VN0008-2YS101_ZRT1738F</td>
+      <td>12 TB</td>
+      <td>(sdc)</td>
+    </tr>
+
+    <tr>
+      <td>Disk 2</td>
+      <td>ST10000NM018G-3CD103_ZRT0RT9S</td>
+      <td>10 TB</td>
+      <td>(sdd)</td>
+    </tr>
+
+    <tr>
+      <td>Disk 3</td>
+      <td>ST10000NM018G-3CD103_ZRT0RSE3</td>
+      <td>10 TB</td>
+      <td>(sde)</td>
+    </tr>
+
+  </tbody>
+</table>
+<p class="fs-6 fst-italic"><small>As of 07/07/2024  2:29:46 PM</small></p>
+</div>
+
+<h6 class="mt-2">HAVEN-NAS4</h6>
+<div class="table-responsive justify-content-center px-5">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Device</th>
+      <th scope="col">Disk Identification</th>
+      <th scope="col">Size</th>
+      <th scope="col">Partition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Parity</td>
+      <td>ST14000NM000J-2TX103_ZR904QVP</td>
+      <td>14 TB</td>
+      <td>(sdb)</td>
+    </tr>
+
+    <tr>
+      <td>Disk 1</td>
+      <td>ST12000VN0008-2YS101_ZRT14E5R</td>
+      <td>12 TB</td>
+      <td>(sdc)</td>
+    </tr>
+
+    <tr>
+      <td>Disk 2</td>
+      <td>ST10000NM018G-3CD103_ZRT17QDC</td>
+      <td>10 TB</td>
+      <td>(sdd)</td>
+    </tr>
+
+    <tr>
+      <td>Disk 3</td>
+      <td>ST10000NM018G-3CD103_ZRT0RTJA</td>
+      <td>10 TB</td>
+      <td>(sde)</td>
+    </tr>
+
+  </tbody>
+</table>
+<p class="fs-6 fst-italic"><small>As of 07/07/2024  2:29:46 PM</small></p>
+</div>
+
+
+<h4 class="mt-4">Cache Pools</h4>
+<p class="mt-2">Unraid supports the use of cache disks which can be collected into "pools" creating a single cache storage area. The purpose of caching is to make reading or writing data to the server faster by writing to storage outside of the array. Typically cache drives are SSDs being much quicker than the HDDs that comprise the array. At predetermined intervals Unraid will move the data to the array removing it from cache.</p>
+<p class="mt-2">Cahce drives are not used on these file servers.</p>
+
+
+<h4 class="mt-4">SATA Disks</h4>
+<p class="mt-2">The hard drives in the array are standard SATA drives that are 3.5 inch (typical desktop size). The drives are all designed for use in NAS servers that are expected to run for long durations and incur many reads and writes. Unraid does support "non-NAS" drives typically used in desktop computers. However, those drives may fail earlier than drives designed for use in servers.</p>
+<p class="mt-2">Since the drives in the servers are all large (10TB or more) they have been selected to reduce noise and power consumption. When possible drives are Helium-filled which has been shown to produce less vibration and use less power.</p>
+
+
+<h4 class="mt-4">USB Boot Disk</h4>
+<p class="mt-2"> The Unraid OS boots from a USB flash device located inside the server. The flash drive is a higher quality drive from a name-brand manufacturer (Sandisk, PNY). Experience has shown that using a lower-quality flash drive results in drive failure.</p>
+<p class="mt-2"> Unraid OS is licensed using the GUID of the flash drive. The license is transferrable to another flash drive but, is limited to a specific number of transfers and must be requested manually from Lime Technology.</p>
+
+
+<h4 class="mt-4">Unassigned Devices</h4>
+<p class="mt-2">Through the use of the plugin "Unassigned Devices" Unraid can support additional drives that exist outside of the array or cache pools. This is handy for creating a "scratch" disk for temporary files without the overhead of parity and whose loss should the drive fail not have a great impact.</p>
+<p class="mt-2">Another feature of Unassigned Devices is the ability to connect an external hard drive and share it on the network. This especially useful for maintaining backups.</p>
+
+
+<p class="footnote mt-5">unraid/content/configuration/storage.html</p>
+<!-- 07/07/2024  3:31:04 PM -->

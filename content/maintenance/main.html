@@ -1,0 +1,65 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Maintenance</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">Maintaining File Server / NAS</h1>
+<p class="mt-3">The file server requires minimal maintenance and can run for months without intervention. The following image shows the key points on the Main tab on the Unraid management interface of which to monitor.</p>
+<img src="/tech/unraid/content/maintenance/HAVEN-NAS3_Main_KeyPoints.png" class="img-fluid mx-auto d-block" alt="Unraid management interface dashboard">
+
+<div class="m-4 table-responsive">
+  <table class="table">
+  <tbody>
+    <tr>
+      <td class="nowrap">Unraid OS Update</td>
+      <td>If there is an update for the Unraid operating system a badge will appear beside the version number at the top left.</td>
+    </tr>
+    <tr>
+      <td>Alerts indicator</td>
+      <td>At the top right of the page is an icon that turns different colors based on the type of alerts have been generated.</td>
+    </tr>
+    <tr>
+      <td>Disk errors</td>
+      <td>If there are any errors on drives in the array they will be displayed in the "Errors" column. Disks with errors should be replaced as-soon-as-possible.</as-soon-as-possible>.</td>
+    </tr>
+    <tr>
+      <td>Disk Usage</td>
+      <td>The last two columns on the array listing show how much disk space has data on it and how much free space is left. As a rule of thumb I like to keep usage below 85%. This is done by replacing smaller disks with larger ones as needed (or when a disk fails).</td>
+    </tr>
+    <tr>
+      <td>Array Status</td>
+      <td>At the lower left Unraid displays the current status of the array and any array operations (like parity check, disk rebuild, etc.) if one is running.</td>
+    </tr>
+    <tr>
+      <td>Temperatures</td>
+      <td>The temperatures for the processor and the main board are displayed at the bottom in the center. Normal operating temperature is about 40c or below. Also on this page are the disk temperatures which should be around 40c depending on the disk and running disk operations.</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+
+<h4 class="mt-4">Updates</h4>
+<p class="mt-2">Most maintenance comes from applying updates to plugins, containers, and the OS itself. Updating the Unraid operating system is done rarely - about once per year - and only after a release has been available for several weeks.</p>
+
+<p class="mt-3 help">Before applying updates to Tailscale or Unraid OS schedule a reboot ~30 minutes ahead using the <b>at</b> utility. This should allow you to reconnect to the server if something goes wrong.</p>
+
+<h4 class="mt-4">Updating Unraid OS</h4>
+<p class="mt-2">When a new version of Unraid is available an orange colored badge will appear at the top-left corner of the management interface. Clicking on this badge displays the changes in the new version and a link to start the upgrade.</p>
+<p class="mt-2">If the badge is no-longer displayed (by dismissing or inadvertently choosing to ignore) the upgrade can be started by clicking on the <b>Tools</b> tab and then clicking on <b>Upgrade OS</b> at the bottom.</p>
+
+<h4 class="mt-4">Virtual Machines</h4>
+<p class="mt-2">There is nothing to do for Virtual machines. Any updates to the VM system are part of the OS. Updates to the guest machine's operating system are not handled by Unraid.</p>
+
+<h4 class="mt-4">Parity Checks</h4>
+<p class="mt-2">Parity checks make sure the information on the parity drive is accurate and can emulate the data on a drive should one fail. Unraid is configured to perform a parity check once per month. If the automated parity check detects issues it will not write corrections to parity. At this point a manual parity check should be run.</p>
+
+<h4 class="mt-4">Replacing Disks</h4>
+<p class="mt-2">Should a drive fail or show signs of impending failure (increasing error counts) it should be replaced ASAP.</p>
+
+
+<p class="footnote mt-5">unraid/content/maintenance/main.html</p>

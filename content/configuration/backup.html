@@ -1,0 +1,31 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/main.html')">Configuration</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Backups</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">Backups</h1>
+<p class="mt-3">There currently is no automated backup process in place. Performing a backup is a manual process and requires the Unraid Plugin <b>Unassigned Devices</b> be installed.</p>
+<p class="mt-2">The backups are done using a script attached to specific USB devices. The script is defined by clicking the "gear" icon for the mount of the USB device on the UD section on the Main screen in Unraid.</p> 
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Main_UD.png" class="img-fluid mx-auto d-block mt-0" alt="UD section on Unraid Main screen">
+
+
+<h4 class="mt-4">JBOD Backup</h4>
+<p class="mt-2">Files are backed-up to a Mediasonic HFR2-SU3S2 PRORAID 4 Bay 3.5" SATA Hard Drive Enclosure via a USB connection to the server. The Proraid box is configured as a JBOD (Just a Bunch Of Discs) device.</p> 
+<img src="/tech/unraid/content/configuration/proraid.png" class="img-fluid mx-auto d-block mt-0" style="max-width: 40%;" alt="Proraid Enclosure">
+
+
+<h4 class="mt-4">Fantom External Backup</h4>
+<p class="mt-2">The Pictures folders are also backed-up to the Fantom external hard drive.</p>
+<img src="/tech/unraid/content/configuration/fantom.jpg" class="img-fluid mx-auto d-block mt-0" style="max-width: 50%;" alt="Fantom external hard drive">
+
+
+<h4 class="mt-4">Appdata Backup</h4>
+<p class="mt-2">The configuration files for the Docker containers are stored to a system folder named <b>appdata</b>. If the container needed to be rebuilt, due to error or hardware failure, a backup of these files could be restored recreating the container.</p>
+<p class="mt-2">In addition to the containers this plugin also backs up the flash drive. Each server has this plugin installed and saves backups to the folder: <b>/mnt/user/Backups/Unraid/</b>. The contents of this folder are synchronized by the Syncthing container. A backup is run weekly on each server.</p>
+
+
+<p class="footnote mt-5">unraid/content/configuration/backup.html</p>

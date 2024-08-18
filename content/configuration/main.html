@@ -1,0 +1,69 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Configuration</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">Unraid Configuration</h1>
+<p class="mt-3">Configuration of the file servers is fairly complex but, any tech-savvy person or homelab enthusiast should be able to understand the information on the following pages.</p>
+
+<h4 class="mt-4">Definitions</h4>
+<p class="mt-2">The following definitions are useful to understand how Unraid works and does not work. The basics of a computer (memory, processors, etc.) is not discussed here and it is assumed you understand the basic construction of computers.</p>
+
+<div class="table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Term</th>
+      <th scope="col">Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Array</td>
+      <td>The set of disks that comprise the general storage in Unraid. This includes the parity drive and multiple data drives. Unlike RAID arrays the disks in Unraid do not need to be the same size.</td>
+    </tr>
+    <tr>
+      <td class="nowrap">Parity (parity drive)</td>
+      <td>Parity is the data that is stored on the parity drive(s) that hold the information needed to serve or rebuild data from data drives in the array should one fail. The parity drive is the disk(s) designated as parity in the array.</td>
+    </tr>
+    <tr>
+      <td>Data drive</td>
+      <td>Data drives in the array is where the files saved to the server are stored. Data drives must be the same size or smaller than the disk(s) designated as parity drive(s) in the array.</td>
+    </tr>
+    <tr>
+      <td>Shares</td>
+      <td>Shares are folders that have been created and shared on the network. In Linux only the root-level folder can be shared (unlike Microsoft Windows servers). Shares are where user permissions are applied.</td>
+    </tr>
+    <tr>
+      <td>Plugins</td>
+      <td>A main feature of Unraid is the plugin ecosystem that extends the functionality of Unraid. Plugins are installed using the "Apps" tab.</td>
+    </tr>
+    <tr>
+      <td>Container</td>
+      <td>Containers are similar to "applications" that can be installed within Unraid to provide a service not related to Unraid. An example would be a webserver for a personal site (like this one). Currently, in Unraid only Docker containers are supported by default. However, LXC/LXD containers can be supported with the use of a plugin.</td>
+    </tr>
+    <tr>
+      <td>Virtual machine</td>
+      <td>Unraid can natively support virtual machines. Similar to containers VMs can host services unrelated to Unraid but, managed from within Unraid.</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+
+<h4 class="mt-4">Management Interface</h4>
+<p class="mt-2">Much of the configuration and maintenance is done through the web-based management interface. In addition to the web-based interface a terminal connection via SSH is needed to configure Unraid.</p>
+<p class="mt-2">The web-based management interface:</p>
+<img src="/tech/unraid/content/configuration/HAVEN-NAS3_Dashboard.png" class="img-fluid mx-auto d-block" alt="Unraid management interface dashboard">
+
+
+<h4 class="mt-4">Build Notes</h4>
+<p class="mt-2">You can view the notes used to configure the server when it was built by clicking <a href="nas3-build-notes.txt" target="_blank">here</a>. An un-redacted version exists on the server in the "Home" share.</p>
+
+
+<p class="footnote mt-5">unraid/content/configuration/main.html</p>
+

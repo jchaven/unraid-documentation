@@ -1,0 +1,38 @@
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/home/home.html')">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/main.html')">Configuration</a></li>
+    <li class="breadcrumb-item"><a href="#" onclick="loadPage('content/configuration/docker.html')">Docker</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Cloudflare</li>
+  </ol>
+</nav>
+
+<h1 class="display-4">Cloudflare</h1>
+<p class="mt-3">The Tunnel daemon creates an encrypted tunnel between your origin web server and Cloudflare's nearest data center, all without opening any public inbound ports.</p>
+<p class="mt-2">The use of tunneling is required because the network the server in High Point is behind a router provided by Lumos (North State) that is configured for Carrier-grade NAT (CGNAT). This means that forwarding port traffic to specific devices on the local network is not possible. This container is not installed on the the server in Charlotte.</p>
+
+<h4 class="mt-4">Container Properties</h4>
+<p class="mt-2">The container selected on the Apps tab in Unraid is the package maintained by the user "Cornflake".</p>
+<div class="px-2">
+  <pre>
+    Added	Apr 28, 2023
+    Repository: cloudflare/cloudflared:latest
+    DockerHub Stars:	368 
+    Last Update:	Feb 20, 2024
+    Maintainer: Cornflake
+  </pre> 
+</div>
+<p class="mt-2">The configuration for the container is simpler than most. Essentially, you just need to enter the token for the Cloudflare tunnel into the "Post Arguments" section.</p>
+
+
+<h4 class="mt-5">Cloudflare properties</h4>
+<p class="mt-2">The tunnel created with Cloudflare is part of their "Zero Trust" applications. <a href="https://one.dash.cloudflare.com" target="_blank">Log into Cloudflare</a> and go to Zero Trust > Networks > Tunnels</p> 
+
+<img src="/tech/unraid/content/configuration/Cloudflare_Tunnel.png" class="img-fluid mx-auto d-block" alt="Cloudflare Tunnel properties">
+
+<p class="mt-5 help" role="alert">The credentials to log into Cloudflare are stored in KeePass and require the two-factor authenticator app 2FAS on a cell phone.</p>
+
+
+<p class="footnote mt-5">unraid/content/configuration/cloudflare.html</p>
+<!-- 07/08/2024  10:30:00 AM -->
