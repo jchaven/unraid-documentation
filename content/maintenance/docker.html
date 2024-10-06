@@ -8,9 +8,13 @@
 </nav>
 
 <h1 class="display-4">Updating Docker Containers</h1>
-<p class="mt-3">Updating containers is easily done on the <b>Docker</b> tab on the Unraid management interface. Rarely is there am issue but, if there is one it is usually resolved by removing the container and re-adding it.</p>
+<p class="mt-3">Updating containers is easily done on the <b>Docker</b> tab on the Unraid management interface. Rarely is there an issue but, if there is one it is usually resolved by removing the container and re-adding it.</p>
+
 <p class="mt-2">Best practice is to update containers by pressing the button <b>Check for Updates</b> followed by <b>Update All</b> at the bottom of the page. If a container is displaying <b><i>Not available</i></b> beside it you can resolve this with the button <b>Check for Updates</b>.</p>
 <img src="content/maintenance/HAVEN-NAS3_Update_Docker.png" class="img-fluid mx-auto d-block mt-0" alt="Unraid management interface for Docker containers">
 
 <p class="mt-4 note">Avoid updating containers if they are actively doing something. e.g. SAB is downloading a file or Sonarr is processing files.</p>
 
+<p class="mt-2">After the containers have been updated the respective application (SAB, Sonarr, etc.) will be automatically restarted. The Unraid server itself should not require a restart.</p>
+
+<p class="footnote mt-5">unraid/content/maintenance/docker.html</p>
