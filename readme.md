@@ -12,12 +12,11 @@ This documentation contains several personal details, but none are so private as
 ## Built With
 
 This site is built with VS Code and uses only HTML, CSS, and just enough Javacsript to load pages.
-All content displayed is in the subfolder **content**. New files added to the **content** is manually added to the **sidebar.html** file. There is no automation.
-
 
 
 ## Deployment
 
+You are free to steal this code for your own use. I ask that any improvements you make get returned.
 The point is anyone with the slightest experience with HTML can understand and edit this code. All code is meant to run on the simplest of HTTP servers without relying on features of any specific webserver (Apache, IIS, NGINX, etc.). 
 
 
@@ -34,10 +33,9 @@ Copy the files to any folder on your webserver then browse to that folder. The s
 
 ## Contributing
 
-You are free to steal this code for your own use. I ask that any improvements you make get returned.
-
 This site is purposefully not a blog, CMS, or any type of database-driven site intended to be used by non-technical people. This site is meant to be coded by people with technical backgrounds in pure HTML. All HTML, CSS, and Javascript should be just enough to display the information without bloating the code.
 
+All content displayed is in the subfolder **content**. New files added to the **content** is manually added to the **sidebar.html** file. There is no automation.
 
 ### Giving Back
 
