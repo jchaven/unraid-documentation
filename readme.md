@@ -12,23 +12,13 @@ This documentation contains several personal details, but none are so private as
 ## Built With
 
 This site is built with VS Code and uses only HTML, CSS, and just enough Javacsript to load pages.
+The point is anyone with the slightest experience with HTML can understand and edit this code. All code is meant to run on the simplest of HTTP servers without relying on features of any specific webserver (Apache, IIS, NGINX, etc.). 
 
 
 ## Deployment
 
 You are free to steal this code for your own use. I ask that any improvements you make get returned.
-The point is anyone with the slightest experience with HTML can understand and edit this code. All code is meant to run on the simplest of HTTP servers without relying on features of any specific webserver (Apache, IIS, NGINX, etc.). 
-
-
-### Prerequisites
-
-A working webserver.
-
-
-### Installing
-
 Copy the files to any folder on your webserver then browse to that folder. The site should load.
-
 
 
 ## Contributing
